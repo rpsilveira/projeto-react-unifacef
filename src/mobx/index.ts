@@ -1,2 +1,7 @@
-import { router } from "./router.store";
-export { router };
+import { router } from './router.store';
+import { home } from '../containers/home/store';
+
+export {
+  router,
+  home,
+}
