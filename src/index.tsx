@@ -9,6 +9,7 @@ import { router } from './mobx/';
 import { Router } from 'react-router-dom';
 import { syncHistoryWithStore } from 'mobx-react-router';
 import Loading from './components/loading';
+import './plugins/sentry.plugin';
 
 const rootElement = document.getElementById('root');
 const browserHistory = createBrowserHistory();
