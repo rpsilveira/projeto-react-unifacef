@@ -51,8 +51,18 @@ export default function Cep(props: Props) {
     </Segment>
   }
 
+  const openMaps = (address: any) => {
+    const url = encodeURI(
+      address.tipo_logradouro +' '+
+      address.logradouro +' '+
+      address.bairro +' '+
+      address.cidade +' '+
+      address.uf);
+    window.open(`https://www.google.com/maps/search/?api=1&query=${url}`, 'blank');
+  }
+
   return (
-    <Card color="blue">
+    <Card color="blue" onClick={() => openMaps(address)}>
       <Card.Content>
         <Card.Header>{address.cidade} - {address.uf}</Card.Header>
         <Card.Meta>{address.bairro}</Card.Meta>
